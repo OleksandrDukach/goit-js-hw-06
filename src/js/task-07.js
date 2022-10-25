@@ -4,6 +4,19 @@ const refs = {
   span: document.querySelector('#text')
 };
 
-refs.input.addEventListener('scroll', event => {
-  console.log('Result:', event)
-})
+function changeFontSize() {
+  refs.span.style.fontSize = refs.input.value + 'px'
+}
+refs.input.addEventListener('input', changeFontSize)
+
+
+//=============Працює так само==============
+// const refs = {
+//   input: document.querySelector('#font-size-control'),
+//   span: document.querySelector('#text')
+// };
+
+// const changeFontSize = () => {
+//   refs.span.style.fontSize = `${ refs.input.value }px`
+// }
+// refs.input.addEventListener('input', changeFontSize)
