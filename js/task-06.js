@@ -6,20 +6,18 @@
 // style.classList.add('js-colors')
 
 
-const refs = {
-    input: document.querySelector('#validation-input')
-};
+const input = document.querySelector('#validation-input')
+;
 
-refs.input.addEventListener('blur', onInputBlur);
+input.addEventListener('blur', onInputBlur);
 
 function onInputBlur(event) {
-    if (event.currentTarget.value.length != refs.input.getAttribute('data-length')) {
-         refs.input.classList.add('invalid')
-    }
-    else {
-        refs.input.classList.remove('invalid');
-            refs.input.classList.add('valid')
-         
+    if (input.value.length === Number(input.dataset.length)) {
+        input.classList.add("valid");
+        input.classList.remove("invalid");
+    } else {
+        input.classList.add("invalid");
+        input.classList.remove("valid");
     }
 }
 

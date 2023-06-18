@@ -18,8 +18,12 @@ function onFormSubmit(event) {
 
 if (email.value === '' || password.value === '') {
   return alert('Заповніть усі поля')
+} else {
+  const newObj = {};
+  newObj.email = form.email.value;
+  newObj.password = form.password.value;
 }
 
-console.log(`Email: ${email.value}, Password: ${password.value}`);
+// console.log(`Email: ${email.value}, Password: ${password.value}`);
 event.currentTarget.reset();
 }

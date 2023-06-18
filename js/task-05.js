@@ -24,6 +24,12 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(name) {
-    // console.log(event.currentTarget.value);
-    refs.nameLabel.textContent = name.currentTarget.value
+    if (refs.input.value) {
+        refs.nameLabel.textContent = name.currentTarget.value
+    }
+    else {
+        refs.nameLabel.textContent = "Anonymous"
+    }
+    // refs.nameLabel.textContent = name.currentTarget.value
+    
 }
