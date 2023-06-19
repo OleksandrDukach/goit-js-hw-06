@@ -24,7 +24,7 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(name) {
-    if (refs.input.value) {
+    if (refs.input.value.trim()) {
         refs.nameLabel.textContent = name.currentTarget.value
     }
     else {
